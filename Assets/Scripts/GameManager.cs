@@ -35,6 +35,11 @@ public class GameManager : MonoBehaviour
         selectedCharacter = character.Replace("Button_","");
     }
 
+    public string GetCharacter()
+    {
+        return selectedCharacter;
+    }
+
     public bool ReceiveDamage(int damage)
     {
         playerHP -= damage;
