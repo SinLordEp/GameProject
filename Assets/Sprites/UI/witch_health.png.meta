@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 301f6708c2d2469499cce2f6f4a5e2be
+guid: 5a707f1b52324a843bd680644a3b2cd7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2806060530409525734
-    second: B_witch_take_damage_0
-  - first:
-      213: -6812477826016509834
-    second: B_witch_take_damage_1
-  - first:
-      213: -3410013055211595750
-    second: B_witch_take_damage_2
+      213: 5795070530676296090
+    second: witch_health_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: B_witch_take_damage_0
+      name: witch_health_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 101
-        width: 22
-        height: 39
+        x: 0
+        y: 0
+        width: 848
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e1dd4d6f2121f620800000000000000
-      internalID: 2806060530409525734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_take_damage_1
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 53
-        width: 23
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6708f04e2873571a0800000000000000
-      internalID: -6812477826016509834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_take_damage_2
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 5
-        width: 21
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a181bac71333da0d0800000000000000
-      internalID: -3410013055211595750
+      spriteID: a998b4da1f93c6050800000000000000
+      internalID: 5795070530676296090
       vertices: []
       indices: 
       edges: []
@@ -197,10 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      B_witch_take_damage_0: 2806060530409525734
-      B_witch_take_damage_1: -6812477826016509834
-      B_witch_take_damage_2: -3410013055211595750
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
