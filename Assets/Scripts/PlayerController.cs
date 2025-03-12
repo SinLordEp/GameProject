@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
-         if (transform.position.y < -10f)
+         if (transform.position.y < -30f)
         {
             Die();
         } 
