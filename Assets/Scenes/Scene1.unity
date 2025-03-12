@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 66512064}
   - component: {fileID: 66512063}
   - component: {fileID: 66512062}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Tiles_3
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 84337126}
   - component: {fileID: 84337125}
   - component: {fileID: 84337124}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Tiles_1
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -537,135 +537,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &224140754
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224140756}
-  - component: {fileID: 224140755}
-  m_Layer: 0
-  m_Name: bgm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &224140755
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 224140754}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2692804b2b33e6c4cb481a315262b561, type: 3}
-  m_Resource: {fileID: 8300000, guid: 2692804b2b33e6c4cb481a315262b561, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &224140756
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 224140754}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.650885, y: 6.664044, z: 0.00010253023}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &272277184
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +548,7 @@ GameObject:
   - component: {fileID: 272277187}
   - component: {fileID: 272277186}
   - component: {fileID: 272277185}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Tiles_1 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -898,7 +769,7 @@ GameObject:
   - component: {fileID: 409752143}
   - component: {fileID: 409752142}
   - component: {fileID: 409752140}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Tiles_0
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1371,7 +1242,7 @@ GameObject:
   - component: {fileID: 610092541}
   - component: {fileID: 610092540}
   - component: {fileID: 610092539}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Tiles_1 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1674,7 +1545,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 897761443}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: player_ground_check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1691,7 +1562,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.18, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1310851189}
@@ -1707,7 +1578,7 @@ GameObject:
   - component: {fileID: 1146238914}
   - component: {fileID: 1146238913}
   - component: {fileID: 1146238911}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Tiles_8
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1857,8 +1728,8 @@ GameObject:
   - component: {fileID: 1310851190}
   - component: {fileID: 1310851192}
   - component: {fileID: 1310851193}
-  m_Layer: 6
-  m_Name: B_witch_idle_0
+  m_Layer: 7
+  m_Name: Witch_Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1998,11 +1869,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpForce: 12
+  knockbackForce: 5
   animator: {fileID: 1310851187}
   groundCheck: {fileID: 897761443}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   lives: 3
 --- !u!60 &1310851193
 PolygonCollider2D:
@@ -2361,7 +2233,7 @@ GameObject:
   - component: {fileID: 1469688812}
   - component: {fileID: 1469688811}
   - component: {fileID: 1469688810}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Tiles_1 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2495,7 +2367,7 @@ GameObject:
   - component: {fileID: 1639126905}
   - component: {fileID: 1639126904}
   - component: {fileID: 1639126902}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Tiles_6
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3021,7 +2893,7 @@ GameObject:
   - component: {fileID: 1979304988}
   - component: {fileID: 1979304987}
   - component: {fileID: 1979304986}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Tiles_6 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3179,6 +3051,5 @@ SceneRoots:
   - {fileID: 99539750}
   - {fileID: 1430298811}
   - {fileID: 1703383322}
-  - {fileID: 224140756}
   - {fileID: 1673762633}
   - {fileID: 1959710378}

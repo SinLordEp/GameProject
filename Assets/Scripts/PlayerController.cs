@@ -5,61 +5,94 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
+    public float knockbackForce = 10f;
+    private bool isGrounded = true;
     private Rigidbody2D rb;
-    private bool isGrounded;
     private bool facingRight = true;
     public Animator animator;
     public Transform groundCheck;
     public LayerMask groundLayer;
-    private float checkRadius = 0.1f;
+    private float checkRadius = 0.2f;
+    private enum State {Idle,Moving,Charging,Attacking,Hurt};
+    private State currentState = State.Idle;
+    private bool isCharging = false;
 
     public int lives;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        animator.SetBool("jumping",false);
     }
 
     void Update()
     {   
-        groundAndJump();
-        float move = Input.GetAxis("Horizontal");
-        rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
-
-        if(move != 0){
-            animator.SetBool("moving", true);
-        } else{
-            animator.SetBool("moving", false);
-        }
-
-        if (move > 0 && !facingRight)
-        {
-            Flip();
-        }
-        else if (move < 0 && facingRight)
-        {
-            Flip();
-        }
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+        HandleInput();
+        HorizontalMoving();
          if (transform.position.y < -30f)
         {
             Die();
         } 
     }
 
-    void groundAndJump(){
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
+    private void HandleInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            isCharging = true;
+            ChangeState(State.Charging);
+        }else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            animator.SetTrigger("Attack");
+            isCharging = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Jump();
+        }
+    }
+
+    private void ChangeState(State newState)
+    {
+        if (currentState != newState)
+        {
+            currentState = newState;
+            animator.SetInteger("State", (int)currentState);
+        }
+    }
+    
+    void HorizontalMoving()
+    {
+        float move = Input.GetAxis("Horizontal");
+        rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
+        if (Mathf.Abs(move) > 0 && !isCharging)
+        {
+            ChangeState(State.Moving);
+        }
+        else if (!isCharging)
+        {
+            ChangeState(State.Idle);
+        }
+        if (move > 0 && !facingRight && !isCharging)
+        {
+            Flip();
+        }
+        else if (move < 0 && facingRight && !isCharging)
+        {
+            Flip();
+        }
+
+    }
+    
+    void Jump()
+    {
+        if (isGrounded)
         {   
-            animator.SetBool("jumping", true);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
-        if(isGrounded){
-           animator.SetBool("jumping", false); 
-        }
-        Debug.DrawRay(groundCheck.position, Vector2.down * checkRadius, Color.red);
     }
+
+    
     void Flip()
     {
         facingRight = !facingRight;
@@ -71,14 +104,26 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy")){
-            if(lives > 0){
-                animator.SetBool("hit",true);
-                lives--;
-            }else{
-                Die();
-            }
+            ReceiveDamage(20);
+            KnockBack(collision);
         }
             
+    }
+
+    void ReceiveDamage(int damage)
+    {
+        if(GameManager.Instance.ReceiveDamage(damage)){
+                animator.SetTrigger("Hurt");
+            }else{
+                animator.SetTrigger("Dead");
+                Die();
+            }
+    }
+
+    void KnockBack(Collision2D collision)
+    {
+        Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+        rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
     }
 
     void Die()
