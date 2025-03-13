@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 7f;
     public float knockbackForce = 10f;
     public float knockbackTime = 1;
+    public float skillSpawnHeight;
     private bool isKnockback = false;
     private Rigidbody2D rb;
     private bool facingRight = true;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private bool isCharging = false;
     private bool isDead = false;
     public GameObject Skill;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -57,9 +59,9 @@ public class PlayerController : MonoBehaviour
     bool isTouchingWall()
     {
         Vector2 direction = facingRight ? Vector2.right : Vector2.left;
-        Vector2 middle = transform.position;
-        Vector2 top = middle + new Vector2(0, 0.8f);
-        Vector2 bottom = middle + new Vector2(0, -0.8f);
+        Vector2 bottom = transform.position;
+        Vector2 middle = bottom + new Vector2(0, 1f);
+        Vector2 top = bottom + new Vector2(0, 2f);
         RaycastHit2D hitTop = Physics2D.Raycast(top, direction, 0.6f, groundLayer);
         RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, 0.6f, groundLayer);
         return hitTop.collider != null || hitMiddle.collider != null;
@@ -129,7 +131,7 @@ public class PlayerController : MonoBehaviour
     void CastSkill()
     {
         float direction = Mathf.Sign(transform.localScale.x);
-        Vector2 spawnPosition = (Vector2)transform.position + new Vector2(direction * 0.6f, -0.9f);
+        Vector2 spawnPosition = (Vector2)transform.position + new Vector2(direction * 0.6f, skillSpawnHeight);
         GameObject skillEffect = Instantiate(Skill, spawnPosition, Quaternion.identity);
         skillEffect.transform.localScale = new Vector3(direction, 1, 1);
     }
@@ -154,7 +156,7 @@ public class PlayerController : MonoBehaviour
     bool isGrounded()
     {
         Vector2 position = transform.position;
-        RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, 1.1f, groundLayer);
+        RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, 0.2f, groundLayer);
         return hit.collider != null;
     }
 

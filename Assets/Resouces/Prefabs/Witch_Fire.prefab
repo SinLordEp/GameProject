@@ -209,6 +209,7 @@ MonoBehaviour:
   jumpForce: 12
   knockbackForce: 10
   knockbackTime: 0.5
+  skillSpawnHeight: -0.3
   animator: {fileID: 4393842791069745848}
   groundLayer:
     serializedVersion: 2

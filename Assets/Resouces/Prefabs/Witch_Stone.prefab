@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 230417760958105496}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.29, y: 0.46, z: 0}
+  m_LocalPosition: {x: -0.9933758, y: 4.4666343, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -156,6 +156,7 @@ MonoBehaviour:
   jumpForce: 12
   knockbackForce: 5
   knockbackTime: 1
+  skillSpawnHeight: -0.2
   animator: {fileID: 2479365553214518039}
   groundLayer:
     serializedVersion: 2
@@ -198,7 +199,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.22, y: 0.4}
     newSize: {x: 0.22, y: 0.4}
     adaptiveTilingThreshold: 0.5
@@ -207,8 +208,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.003858924, y: 0.090777725}
-      - {x: -0.08378668, y: -0.02215895}
-      - {x: 0.0016744155, y: -0.1747089}
-      - {x: 0.08378671, y: -0.024708815}
+    - - {x: 0.003858924, y: 0.3167544}
+      - {x: -0.08378683, y: 0.16172424}
+      - {x: 0.0061054546, y: 0.026897848}
+      - {x: 0.090433076, y: 0.15917438}
   m_UseDelaunayMesh: 0
