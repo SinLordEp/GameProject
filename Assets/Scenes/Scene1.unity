@@ -1924,8 +1924,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   Skill: {fileID: 8708612603022639483, guid: b0fd149dd7aeee14b97b2a333d1a347b, type: 3}
---- !u!61 &1310851193
-BoxCollider2D:
+--- !u!60 &1310851193
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1958,7 +1958,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0010756142, y: -0.055936217}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1968,8 +1968,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.12749016, y: 0.2881276}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.003858924, y: 0.090777725}
+      - {x: -0.08378668, y: -0.02215895}
+      - {x: 0.0016744155, y: -0.1747089}
+      - {x: 0.08378671, y: -0.024708815}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1365647581
 GameObject:
   m_ObjectHideFlags: 0
@@ -3150,6 +3155,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3195053872452096060, guid: b54ae36c51fc25b48ab526de66b6a9cd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -124.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195053872452096060, guid: b54ae36c51fc25b48ab526de66b6a9cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 164.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5087337705191874833, guid: b54ae36c51fc25b48ab526de66b6a9cd, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3157,6 +3170,14 @@ PrefabInstance:
     - target: {fileID: 5087337705191874833, guid: b54ae36c51fc25b48ab526de66b6a9cd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087337705191874833, guid: b54ae36c51fc25b48ab526de66b6a9cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -12.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087337705191874833, guid: b54ae36c51fc25b48ab526de66b6a9cd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.155
       objectReference: {fileID: 0}
     - target: {fileID: 5868547660394668489, guid: b54ae36c51fc25b48ab526de66b6a9cd, type: 3}
       propertyPath: m_SizeDelta.x
