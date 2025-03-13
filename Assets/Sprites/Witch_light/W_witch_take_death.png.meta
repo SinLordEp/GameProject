@@ -163,6 +163,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -597,7 +610,26 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      W_witch_take_death_0: -4518168756602398426
+      W_witch_take_death_1: 4425752924028562108
+      W_witch_take_death_10: 1381693164334893130
+      W_witch_take_death_11: -3863852486084813285
+      W_witch_take_death_12: 3325590382458255523
+      W_witch_take_death_13: 3450541522867800709
+      W_witch_take_death_14: 6758041627085871638
+      W_witch_take_death_15: 7912775900978540008
+      W_witch_take_death_16: -6507945366830409806
+      W_witch_take_death_17: -7374347306368205698
+      W_witch_take_death_18: -4917902470283444332
+      W_witch_take_death_2: 235196191980526509
+      W_witch_take_death_3: -81474590304638492
+      W_witch_take_death_4: 8320521777361880886
+      W_witch_take_death_5: -2992674490395090066
+      W_witch_take_death_6: -5382796196755783609
+      W_witch_take_death_7: -5114178081080968206
+      W_witch_take_death_8: 8271765344725737785
+      W_witch_take_death_9: 6134930000659847960
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
