@@ -133,10 +133,10 @@ TextureImporter:
         serializedVersion: 2
         x: 9
         y: 319
-        width: 29
+        width: 31
         height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.47454366, y: 0.06261743}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -157,8 +157,8 @@ TextureImporter:
         y: 255
         width: 31
         height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.53906465, y: 0.06231623}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,8 +179,8 @@ TextureImporter:
         y: 191
         width: 31
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.50697947, y: 0.058532402}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -199,10 +199,10 @@ TextureImporter:
         serializedVersion: 2
         x: 8
         y: 127
-        width: 30
+        width: 31
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5072062, y: 0.05813225}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -223,8 +223,8 @@ TextureImporter:
         y: 63
         width: 31
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5095057, y: 0.06031291}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -243,10 +243,10 @@ TextureImporter:
         serializedVersion: 2
         x: 9
         y: 0
-        width: 30
+        width: 31
         height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.47376737, y: 0.039928813}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b4e80d7c613b63947a2302cf38271622
     internalID: 0
     vertices: []
     indices: 
@@ -272,7 +272,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      W_witch_idle_0: 1593733118612006618
+      W_witch_idle_1: -8463744388022550139
+      W_witch_idle_2: 6058367679848035647
+      W_witch_idle_3: 4878295041531599780
+      W_witch_idle_4: 1699950532787444617
+      W_witch_idle_5: 7505002752509531124
+      W_witch_idle_6: -748839480
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
