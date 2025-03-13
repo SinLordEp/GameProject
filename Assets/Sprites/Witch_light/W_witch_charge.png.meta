@@ -162,8 +162,8 @@ TextureImporter:
         y: 447
         width: 42
         height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6290339, y: 0.0628215}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -177,37 +177,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: W_witch_charge_1
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 394
-        width: 12
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7467bcebee71a4d60800000000000000
-      internalID: 7875133212581393991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: W_witch_charge_2
       rect:
         serializedVersion: 2
-        x: 71
+        x: 60
         y: 383
-        width: 40
+        width: 51
         height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5567624, y: 0.061535228}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -221,37 +199,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: W_witch_charge_3
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 328
-        width: 12
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b6b8c6b4ba3c258d0800000000000000
-      internalID: -2859007672954614933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: W_witch_charge_4
       rect:
         serializedVersion: 2
-        x: 69
+        x: 59
         y: 319
-        width: 45
+        width: 55
         height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5338, y: 0.060651314}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -265,37 +221,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: W_witch_charge_5
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 259
-        width: 19
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: decfd5ab3beb40230800000000000000
-      internalID: 3604215280938384621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: W_witch_charge_6
       rect:
         serializedVersion: 2
-        x: 65
+        x: 60
         y: 255
-        width: 50
+        width: 55
         height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.51627976, y: 0.06131456}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -309,28 +243,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: W_witch_charge_7
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 210
-        width: 22
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44ccab2de8c9881e0800000000000000
-      internalID: -2195332681108370364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: W_witch_charge_8
       rect:
         serializedVersion: 2
@@ -338,8 +250,8 @@ TextureImporter:
         y: 191
         width: 52
         height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.48862383, y: 0.06281905}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -353,37 +265,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: W_witch_charge_9
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 137
-        width: 14
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44f5e4b3ed7d08240800000000000000
-      internalID: 4792067352999911236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: W_witch_charge_10
       rect:
         serializedVersion: 2
-        x: 70
+        x: 60
         y: 127
-        width: 43
+        width: 53
         height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5356429, y: 0.06278506}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -397,37 +287,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: W_witch_charge_11
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 69
-        width: 15
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ef79a3074b3cbcdc0800000000000000
-      internalID: -3617582695917643778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: W_witch_charge_12
       rect:
         serializedVersion: 2
-        x: 69
+        x: 59
         y: 63
-        width: 42
+        width: 52
         height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.56531435, y: 0.06529962}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -441,37 +309,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: W_witch_charge_13
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 6
-        width: 18
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3e76dccdebff4ba00800000000000000
-      internalID: 771522631400515555
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: W_witch_charge_14
       rect:
         serializedVersion: 2
-        x: 66
+        x: 60
         y: 0
-        width: 41
+        width: 47
         height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.60460484, y: 0.041232422}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -488,7 +334,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0aa2c429b2c75684cbebea6c56284de4
     internalID: 0
     vertices: []
     indices: 
@@ -497,7 +343,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      W_witch_charge_0: -5798420438782646770
+      W_witch_charge_10: 2026217761777365429
+      W_witch_charge_12: -2080655827008440235
+      W_witch_charge_14: -2564721814001228040
+      W_witch_charge_2: 6704962543946939194
+      W_witch_charge_4: -383912152828394550
+      W_witch_charge_6: -1433367624096455644
+      W_witch_charge_8: 3411516809765067466
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

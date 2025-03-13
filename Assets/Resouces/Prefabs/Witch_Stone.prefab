@@ -157,6 +157,7 @@ MonoBehaviour:
   knockbackForce: 5
   knockbackTime: 1
   skillSpawnHeight: -0.2
+  skillDelay: 0.5
   animator: {fileID: 2479365553214518039}
   groundLayer:
     serializedVersion: 2

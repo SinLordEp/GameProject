@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float knockbackForce = 10f;
     public float knockbackTime = 1;
     public float skillSpawnHeight;
+    public float skillDelay;
     private bool isKnockback = false;
     private Rigidbody2D rb;
     private bool facingRight = true;
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
         }else if (Input.GetKeyUp(KeyCode.Space))
         {
             animator.SetTrigger("Attack");
-            CastSkill();
+            Invoke("CastSkill", skillDelay);
             isCharging = false;
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))

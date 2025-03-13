@@ -153,8 +153,8 @@ TextureImporter:
         y: 516
         width: 40
         height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.65158564, y: 0.062454578}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,8 +175,8 @@ TextureImporter:
         y: 422
         width: 32
         height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.56412953, y: 0.05759706}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -197,8 +197,8 @@ TextureImporter:
         y: 469
         width: 30
         height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5356587, y: 0.05872909}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,8 +219,8 @@ TextureImporter:
         y: 328
         width: 35
         height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.37131882, y: 0.057091247}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -241,8 +241,8 @@ TextureImporter:
         y: 375
         width: 34
         height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.3563205, y: 0.06026118}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -261,10 +261,10 @@ TextureImporter:
         serializedVersion: 2
         x: 8
         y: 281
-        width: 109
+        width: 36
         height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.56178534, y: 0.052475993}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -283,10 +283,10 @@ TextureImporter:
         serializedVersion: 2
         x: 6
         y: 234
-        width: 126
+        width: 38
         height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5847008, y: 0.053301726}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -305,10 +305,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2
         y: 187
-        width: 130
+        width: 42
         height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.59933007, y: 0.055689726}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -327,10 +327,10 @@ TextureImporter:
         serializedVersion: 2
         x: 4
         y: 140
-        width: 128
+        width: 40
         height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.57977957, y: 0.053664815}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -348,11 +348,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 60
-        width: 131
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 93
+        width: 43
+        height: 46
+      alignment: 9
+      pivot: {x: 0.610204, y: 0.05026129}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -373,8 +373,8 @@ TextureImporter:
         y: 46
         width: 36
         height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5619729, y: 0.05034459}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -395,8 +395,8 @@ TextureImporter:
         y: 0
         width: 42
         height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6731893, y: 0.03182193}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -409,11 +409,143 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: W_witch_attack_12
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 281
+        width: 88
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1c793942fcd68439618e9441e4acf3
+      internalID: 269756500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W_witch_attack_13
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 234
+        width: 88
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bf9ae7bf09d984e94815892fc09540
+      internalID: -384586889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W_witch_attack_14
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 187
+        width: 88
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f54520575dbe246a93ae4e76857d9c
+      internalID: 193544019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W_witch_attack_15
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 140
+        width: 88
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d1030339c2aeb42ba676b5ac7dc0b3
+      internalID: -1640402166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W_witch_attack_16
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 93
+        width: 88
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd256f5de9a63f4b9b3eff033d07a27
+      internalID: -2145067899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W_witch_attack_17
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 46
+        width: 88
+        height: 45
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79253c0c2f87e06488c3ece8f9b72adb
+      internalID: -30851146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c69114a77c50a1741b464c9359c19091
     internalID: 0
     vertices: []
     indices: 
@@ -422,7 +554,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      W_witch_attack_12: 269756500
+      W_witch_attack_13: -384586889
+      W_witch_attack_14: 193544019
+      W_witch_attack_15: -1640402166
+      W_witch_attack_16: -2145067899
+      W_witch_attack_17: -30851146
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
