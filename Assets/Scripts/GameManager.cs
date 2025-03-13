@@ -46,4 +46,9 @@ public class GameManager : MonoBehaviour
         return playerHP > 0;
     }
 
+    public int GetHP()
+    {
+        return playerHP;
+    }
+
 }
