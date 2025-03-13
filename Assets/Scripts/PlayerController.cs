@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private enum State {Idle,Moving,Charging,Hurt};
     private State currentState = State.Idle;
     private bool isCharging = false;
-
+    private bool isDead = false;
     public GameObject Skill;
     void Start()
     {
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     {   
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
         HandleInput();
-        if(!isKnockback)
+        if(!isKnockback && !isDead)
         {
             HorizontalMoving();
         }
@@ -130,8 +130,9 @@ public class PlayerController : MonoBehaviour
         if(GameManager.Instance.ReceiveDamage(damage)){
                 animator.SetTrigger("Hurt");
             }else{
+                isDead = true;
                 animator.SetTrigger("Dead");
-                Die();
+                Invoke("Die", 3f);
             }
     }
 

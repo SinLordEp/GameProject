@@ -1631,18 +1631,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.1661801, y: 0.129818}
+    - - {x: -0.16439521, y: 0.1217861}
       - {x: -0.31276923, y: 0.059752613}
       - {x: -0.39813447, y: 0.016872734}
       - {x: -0.48749545, y: -0.031848066}
+      - {x: -0.4870048, y: -0.06983132}
       - {x: -0.48499998, y: -0.225}
       - {x: -0.47951493, y: -0.21483955}
       - {x: -0.17463544, y: -0.059611656}
       - {x: 0.1434497, y: -0.06022936}
       - {x: 0.46080595, y: -0.2219366}
       - {x: 0.47193664, y: -0.21774253}
-      - {x: 0.47089267, y: -0.029236682}
-      - {x: 0.14833546, y: 0.12940803}
+      - {x: 0.4673229, y: -0.034591228}
+      - {x: 0.14744312, y: 0.12137619}
   m_UseDelaunayMesh: 0
 --- !u!212 &1146238913
 SpriteRenderer:
@@ -1877,8 +1878,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   Skill: {fileID: 8708612603022639483, guid: b0fd149dd7aeee14b97b2a333d1a347b, type: 3}
---- !u!60 &1310851193
-PolygonCollider2D:
+--- !u!61 &1310851193
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1911,7 +1912,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0010756142, y: -0.055936217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1921,19 +1922,8 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.006917595, y: 0.19780165}
-      - {x: -0.016810028, y: 0.19560334}
-      - {x: -0.11, y: 0.061636824}
-      - {x: -0.06163682, y: -0.1720908}
-      - {x: -0.03, y: -0.17131421}
-      - {x: 0.06780169, y: -0.17241338}
-      - {x: 0.06780169, y: -0.17131422}
-      - {x: 0.06471922, y: -0.14549582}
-      - {x: 0.10890083, y: 0.05562719}
-      - {x: 0.10780169, y: 0.083727635}
-  m_UseDelaunayMesh: 0
+  m_Size: {x: 0.12749016, y: 0.2881276}
+  m_EdgeRadius: 0
 --- !u!1 &1365647581
 GameObject:
   m_ObjectHideFlags: 0
@@ -2428,7 +2418,7 @@ PolygonCollider2D:
       - {x: 0.29774752, y: -0.19853403}
       - {x: 0.29789874, y: -0.072200865}
       - {x: 0.63741606, y: -0.07580859}
-      - {x: 0.6375045, y: 0.11017133}
+      - {x: 0.63377595, y: 0.10457836}
   m_UseDelaunayMesh: 0
 --- !u!212 &1639126904
 SpriteRenderer:
@@ -2947,7 +2937,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.64249545, y: 0.1226488}
+    - - {x: -0.6389257, y: 0.1217564}
       - {x: -0.64, y: -0.074999996}
       - {x: 0.02466029, y: -0.08067778}
       - {x: 0.022406518, y: -0.19983238}
