@@ -1870,12 +1870,13 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 12
   knockbackForce: 5
+  knockbackTime: 1
   animator: {fileID: 1310851187}
   groundCheck: {fileID: 897761443}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  lives: 3
+  Skill: {fileID: 8708612603022639483, guid: b0fd149dd7aeee14b97b2a333d1a347b, type: 3}
 --- !u!60 &1310851193
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
     public float knockbackForce = 10f;
+    public float knockbackTime = 1;
     private bool isGrounded = true;
     private Rigidbody2D rb;
     private bool facingRight = true;
@@ -17,8 +18,7 @@ public class PlayerController : MonoBehaviour
     private State currentState = State.Idle;
     private bool isCharging = false;
 
-    public int lives;
-
+    public GameObject Skill;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         }else if (Input.GetKeyUp(KeyCode.Space))
         {
             animator.SetTrigger("Attack");
+            CastSkill();
             isCharging = false;
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -110,6 +111,13 @@ public class PlayerController : MonoBehaviour
             
     }
 
+    void CastSkill()
+    {
+        float direction = Mathf.Sign(transform.localScale.x);
+        Vector2 spawnPosition = (Vector2)transform.position + new Vector2(direction * 0.6f, -0.9f);
+        GameObject skillEffect = Instantiate(Skill, spawnPosition, Quaternion.identity);
+        skillEffect.transform.localScale = new Vector3(direction, 1, 1);
+    }
     void ReceiveDamage(int damage)
     {
         if(GameManager.Instance.ReceiveDamage(damage)){
