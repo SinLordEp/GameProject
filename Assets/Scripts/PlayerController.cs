@@ -5,7 +5,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpForce = 7f;
+    public float jumpForce = 6f;
     public float knockbackForce = 10f;
     public float knockbackTime = 1;
     public float skillSpawnHeight;
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
         Vector2 direction = facingRight ? Vector2.right : Vector2.left;
         Vector2 bottom = transform.position;
         Vector2 middle = bottom + new Vector2(0, 1f);
-        Vector2 top = bottom + new Vector2(0, 2f);
+        Vector2 top = bottom + new Vector2(0, 1f);
         RaycastHit2D hitTop = Physics2D.Raycast(top, direction, 0.6f, groundLayer);
         RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, 0.6f, groundLayer);
         return hitTop.collider != null || hitMiddle.collider != null;
