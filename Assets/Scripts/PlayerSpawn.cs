@@ -3,18 +3,12 @@ using UnityEngine;
 public class PlayerSpawn : MonoBehaviour
 {
     public Transform spawnPoint; 
+    public GameObject[] characters;
     void Start()
     {
-        GameObject character = Resources.Load<GameObject>("Prefabs/" + GameManager.Instance.GetCharacter());
-
-        if (character != null)
-        {
-            Instantiate(character, spawnPoint.position, Quaternion.identity);
-        }
-        else
-        {
-            Debug.LogError("Character does not exist");
-        }
+        int selectedIndex = GameManager.Instance.GetCharacter();
+        Instantiate(characters[selectedIndex], spawnPoint.position, Quaternion.identity);
+        Debug.Log("Character spawned: " + characters[selectedIndex].name);
     }
 
     void Update()

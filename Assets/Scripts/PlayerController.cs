@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private bool facingRight = true;
     public Animator animator;
     public LayerMask groundLayer;
-    private enum State {Idle,Moving,Charging,Hurt};
+    private enum State {Idle,Moving,Charging};
     private State currentState = State.Idle;
     private bool isCharging = false;
     private bool isDead = false;

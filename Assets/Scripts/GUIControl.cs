@@ -9,9 +9,9 @@ public class GUIControl : MonoBehaviour
     private string maxHP;
     void Start()
     {
-        slider.maxValue = GameManager.Instance.GetHP();
+        slider.maxValue = GameManager.Instance.GetMaxHP();
         slider.value = slider.maxValue;
-        maxHP = "/" + GameManager.Instance.GetHP();
+        maxHP = "/" + GameManager.Instance.GetMaxHP();
         text.text = (int) slider.value + maxHP;
     }
 

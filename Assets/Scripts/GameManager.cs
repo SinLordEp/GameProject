@@ -4,8 +4,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public int playerHP = 100;
-    public string selectedCharacter = "";
+    private int playerHP = 100;
+    private int maxHP = 100;
+    private int selectedCharacter = 0;
 
     private void Awake()
     {
@@ -24,7 +25,6 @@ public class GameManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -32,10 +32,29 @@ public class GameManager : MonoBehaviour
 
     public void SetCharacter(string character)
     {
-        selectedCharacter = character.Replace("Button_","");
+        switch(character)
+        {
+            case "Witch_Stone":
+                maxHP = 200;
+                selectedCharacter = 0;
+                break;
+            case "Witch_Fire":
+                maxHP = 100;
+                selectedCharacter = 1;
+                break;
+            case "Witch_Light":
+                maxHP = 150;
+                selectedCharacter = 2;
+                break;
+            default:
+               Debug.Log("Unknown charater type");
+                break;
+        }
+        playerHP = maxHP;
+        Debug.Log("Character Name: " + selectedCharacter);
     }
 
-    public string GetCharacter()
+    public int GetCharacter()
     {
         return selectedCharacter;
     }
@@ -50,5 +69,11 @@ public class GameManager : MonoBehaviour
     {
         return playerHP;
     }
+
+    public int GetMaxHP()
+    {
+        return maxHP;
+    }
+
 
 }

@@ -31,7 +31,8 @@ public class IntroSelection : MonoBehaviour
 
     void StartGame()
     {   
-        GameManager.Instance.SetCharacter(selectedButton.GetType().Name);
+        string characterName = (selectedButton.gameObject.name).Replace("Button_","");
+        GameManager.Instance.SetCharacter(characterName);
         SceneManager.LoadScene("Scene1");
     }
 
