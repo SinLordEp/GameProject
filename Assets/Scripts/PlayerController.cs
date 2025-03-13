@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 7f;
     public float knockbackForce = 10f;
     public float knockbackTime = 1;
+    private bool isKnockback = false;
     private bool isGrounded = true;
     private Rigidbody2D rb;
     private bool facingRight = true;
@@ -14,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     private float checkRadius = 0.2f;
-    private enum State {Idle,Moving,Charging,Attacking,Hurt};
+    private enum State {Idle,Moving,Charging,Hurt};
     private State currentState = State.Idle;
     private bool isCharging = false;
 
@@ -28,7 +30,10 @@ public class PlayerController : MonoBehaviour
     {   
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
         HandleInput();
-        HorizontalMoving();
+        if(!isKnockback)
+        {
+            HorizontalMoving();
+        }
          if (transform.position.y < -30f)
         {
             Die();
@@ -104,9 +109,11 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Enemy")){
+        if(!isKnockback && collision.gameObject.CompareTag("Enemy")){
+            isKnockback = true;
             ReceiveDamage(20);
-            KnockBack(collision);
+            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+            StartCoroutine(Knockback(knockbackDirection));
         }
             
     }
@@ -128,10 +135,11 @@ public class PlayerController : MonoBehaviour
             }
     }
 
-    void KnockBack(Collision2D collision)
+    private IEnumerator Knockback(Vector2 direction)
     {
-        Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
-        rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+        rb.linearVelocity = direction * knockbackForce;
+        yield return new WaitForSeconds(knockbackTime);
+        isKnockback = false;
     }
 
     void Die()
