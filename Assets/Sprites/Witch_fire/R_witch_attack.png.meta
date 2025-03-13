@@ -168,8 +168,8 @@ TextureImporter:
         y: 458
         width: 35
         height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.40169984, y: 0.19160378}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -183,37 +183,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: R_witch_attack_1
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 394
-        width: 17
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d2785dd4f5b86a20800000000000000
-      internalID: 3055892410461090512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: R_witch_attack_2
       rect:
         serializedVersion: 2
-        x: 31
+        x: 26
         y: 389
-        width: 37
+        width: 42
         height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.40466046, y: 0.25686592}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -234,8 +212,8 @@ TextureImporter:
         y: 329
         width: 66
         height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.29043794, y: 0.1905769}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -249,37 +227,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: R_witch_attack_4
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 268
-        width: 8
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 86ebe5bf2b33e6cf0800000000000000
-      internalID: -257211284899053976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: R_witch_attack_5
       rect:
         serializedVersion: 2
-        x: 33
-        y: 267
-        width: 80
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 17
+        y: 266
+        width: 39
+        height: 60
+      alignment: 9
+      pivot: {x: 0.6679484, y: 0.12935232}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -296,11 +252,11 @@ TextureImporter:
       name: R_witch_attack_6
       rect:
         serializedVersion: 2
-        x: 93
-        y: 267
-        width: 26
-        height: 11
-      alignment: 0
+        x: 56
+        y: 266
+        width: 63
+        height: 60
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -322,8 +278,8 @@ TextureImporter:
         y: 203
         width: 40
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.7291924, y: 0.117456116}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -340,11 +296,11 @@ TextureImporter:
       name: R_witch_attack_8
       rect:
         serializedVersion: 2
-        x: 73
+        x: 54
         y: 203
-        width: 68
+        width: 91
         height: 57
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -359,59 +315,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: R_witch_attack_9
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 203
-        width: 24
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bd30866e70b879430800000000000000
-      internalID: 3789650477502170075
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: R_witch_attack_10
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 138
-        width: 17
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 76c430ad1fdb4ffd0800000000000000
-      internalID: -2309011862491804569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: R_witch_attack_11
       rect:
         serializedVersion: 2
-        x: 32
-        y: 140
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11
+        y: 137
+        width: 43
+        height: 51
+      alignment: 9
+      pivot: {x: 0.750767, y: 0.13174678}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -428,11 +340,11 @@ TextureImporter:
       name: R_witch_attack_12
       rect:
         serializedVersion: 2
-        x: 82
-        y: 138
-        width: 68
-        height: 56
-      alignment: 0
+        x: 54
+        y: 137
+        width: 101
+        height: 57
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -447,28 +359,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: R_witch_attack_13
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 138
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d12aa702bfc8cf590800000000000000
-      internalID: -7639075857717616099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: R_witch_attack_14
       rect:
         serializedVersion: 2
@@ -476,8 +366,8 @@ TextureImporter:
         y: 73
         width: 55
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.7901586, y: 0.10683052}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -494,11 +384,11 @@ TextureImporter:
       name: R_witch_attack_15
       rect:
         serializedVersion: 2
-        x: 113
-        y: 79
-        width: 42
-        height: 50
-      alignment: 0
+        x: 55
+        y: 73
+        width: 100
+        height: 56
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -520,8 +410,8 @@ TextureImporter:
         y: 10
         width: 20
         height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49999982, y: 0.06782353}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -538,7 +428,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d0e42b2ceb1ecc04bba8cd2239308437
     internalID: 0
     vertices: []
     indices: 
@@ -547,7 +437,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      R_witch_attack_0: 622200510475574627
+      R_witch_attack_11: -5944054347198035160
+      R_witch_attack_12: -6821738455203510977
+      R_witch_attack_14: 3862180975106866675
+      R_witch_attack_15: -7038879846344348713
+      R_witch_attack_16: -8841722369488330495
+      R_witch_attack_2: 4894301995993676105
+      R_witch_attack_3: 678913060324448203
+      R_witch_attack_5: 7364319941295080069
+      R_witch_attack_6: 8880717964633419450
+      R_witch_attack_7: 8041325340405930690
+      R_witch_attack_8: -3245388001849380597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

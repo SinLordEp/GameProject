@@ -383,7 +383,7 @@ Animator:
   m_GameObject: {fileID: 93883261}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1d3042829632d4d4eb10181fe96892f3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2d591783be4a64e4096e47fca8262ffa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5296944262663640658, guid: 1841b91a36faea9448fcd5eb217a888b, type: 3}
+  m_Sprite: {fileID: -505467644409604633, guid: 74ecde8f57650344480b7ac550518db9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2308,8 +2308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1105be17a94334a80cbe17cf459ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: 100
-  selectedCharacter: 
 --- !u!4 &826918381
 Transform:
   m_ObjectHideFlags: 0

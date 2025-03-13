@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - PatrolBorder
   - StoneSkill
+  - FireSkill
   layers:
   - Default
   - TransparentFX

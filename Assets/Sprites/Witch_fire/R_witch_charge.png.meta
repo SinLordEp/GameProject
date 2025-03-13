@@ -147,8 +147,8 @@ TextureImporter:
         y: 595
         width: 20
         height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4887987, y: 0.06196367}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,8 +169,8 @@ TextureImporter:
         y: 530
         width: 24
         height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.46266207, y: 0.06196367}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,11 +188,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 26
-        y: 459
-        width: 39
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 463
+        width: 36
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4813312, y: 0.10286853}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,11 +210,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 23
-        y: 394
+        y: 397
         width: 41
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 49
+      alignment: 9
+      pivot: {x: 0.499476, y: 0.12441082}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,11 +232,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 23
-        y: 329
-        width: 41
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 331
+        width: 42
+        height: 51
+      alignment: 9
+      pivot: {x: 0.48579562, y: 0.14074588}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -253,12 +253,12 @@ TextureImporter:
       name: R_witch_charge_5
       rect:
         serializedVersion: 2
-        x: 27
-        y: 264
+        x: 26
+        y: 267
         width: 37
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 51
+      alignment: 9
+      pivot: {x: 0.46913022, y: 0.1242586}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -275,12 +275,12 @@ TextureImporter:
       name: R_witch_charge_6
       rect:
         serializedVersion: 2
-        x: 29
-        y: 199
+        x: 27
+        y: 204
         width: 35
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4630988, y: 0.09027195}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -298,11 +298,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 134
+        y: 137
         width: 38
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 49
+      alignment: 9
+      pivot: {x: 0.50077397, y: 0.12344298}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -319,12 +319,12 @@ TextureImporter:
       name: R_witch_charge_8
       rect:
         serializedVersion: 2
-        x: 24
-        y: 69
+        x: 25
+        y: 72
         width: 36
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 50
+      alignment: 9
+      pivot: {x: 0.4972586, y: 0.12769577}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -341,12 +341,12 @@ TextureImporter:
       name: R_witch_charge_9
       rect:
         serializedVersion: 2
-        x: 27
-        y: 4
+        x: 25
+        y: 7
         width: 38
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 52
+      alignment: 9
+      pivot: {x: 0.472546, y: 0.12278362}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -363,7 +363,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4f8773a73fe646f4b954b80d19af3251
     internalID: 0
     vertices: []
     indices: 
@@ -372,7 +372,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      R_witch_charge_0: -6553163879545305689
+      R_witch_charge_1: -8555481251326198661
+      R_witch_charge_10: -614161252
+      R_witch_charge_2: -4188892969511581576
+      R_witch_charge_3: 125266199395904389
+      R_witch_charge_4: 2402467208259105632
+      R_witch_charge_5: -375016900091515595
+      R_witch_charge_6: 9009595407276110656
+      R_witch_charge_7: -4448328065023179272
+      R_witch_charge_8: -8089509624325743844
+      R_witch_charge_9: 6962070372729576837
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

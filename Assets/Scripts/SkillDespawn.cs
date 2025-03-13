@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StoneSkill : MonoBehaviour
+public class SkillDespawn : MonoBehaviour
 {
     public float lifetime = 1f;
 

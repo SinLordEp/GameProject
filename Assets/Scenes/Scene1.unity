@@ -2755,6 +2755,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1844975145}
   characters:
   - {fileID: 230417760958105496, guid: 8c7b70019d6c53b458f1a41fc29af901, type: 3}
+  - {fileID: 6918292544449737916, guid: 44373dbd9f2d2194bb67eb87bbc0f223, type: 3}
 --- !u!4 &1844975145
 Transform:
   m_ObjectHideFlags: 0
