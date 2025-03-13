@@ -9,13 +9,10 @@ public class PlayerController : MonoBehaviour
     public float knockbackForce = 10f;
     public float knockbackTime = 1;
     private bool isKnockback = false;
-    private bool isGrounded = true;
     private Rigidbody2D rb;
     private bool facingRight = true;
     public Animator animator;
-    public Transform groundCheck;
     public LayerMask groundLayer;
-    private float checkRadius = 0.2f;
     private enum State {Idle,Moving,Charging,Hurt};
     private State currentState = State.Idle;
     private bool isCharging = false;
@@ -28,7 +25,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {   
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
         HandleInput();
         if(!isKnockback && !isDead)
         {
@@ -58,6 +54,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    bool isTouchingWall()
+    {
+        Vector2 direction = facingRight ? Vector2.right : Vector2.left;
+        Vector2 middle = transform.position;
+        Vector2 top = middle + new Vector2(0, 0.8f);
+        Vector2 bottom = middle + new Vector2(0, -0.8f);
+        RaycastHit2D hitTop = Physics2D.Raycast(top, direction, 0.6f, groundLayer);
+        RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, 0.6f, groundLayer);
+        return hitTop.collider != null || hitMiddle.collider != null;
+
+    }
     private void ChangeState(State newState)
     {
         if (currentState != newState)
@@ -66,11 +73,17 @@ public class PlayerController : MonoBehaviour
             animator.SetInteger("State", (int)currentState);
         }
     }
-    
     void HorizontalMoving()
     {
         float move = Input.GetAxis("Horizontal");
-        rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
+        if (isTouchingWall() && move != 0)
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
+        }
         if (Mathf.Abs(move) > 0 && !isCharging)
         {
             ChangeState(State.Moving);
@@ -89,16 +102,13 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    
     void Jump()
     {
-        if (isGrounded)
-        {   
+        if(isGrounded())
+        {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
     }
-
-    
     void Flip()
     {
         facingRight = !facingRight;
@@ -106,7 +116,6 @@ public class PlayerController : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(!isKnockback && collision.gameObject.CompareTag("Enemy")){
@@ -117,7 +126,6 @@ public class PlayerController : MonoBehaviour
         }
             
     }
-
     void CastSkill()
     {
         float direction = Mathf.Sign(transform.localScale.x);
@@ -141,6 +149,13 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = direction * knockbackForce;
         yield return new WaitForSeconds(knockbackTime);
         isKnockback = false;
+    }
+
+    bool isGrounded()
+    {
+        Vector2 position = transform.position;
+        RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, 1.1f, groundLayer);
+        return hit.collider != null;
     }
 
     void Die()
