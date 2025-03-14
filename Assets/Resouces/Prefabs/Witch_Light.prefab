@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4711179449889024613}
   - component: {fileID: 8947820442947886139}
   - component: {fileID: 7369283400027152045}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Witch_Light
   m_TagString: Player
   m_Icon: {fileID: 0}

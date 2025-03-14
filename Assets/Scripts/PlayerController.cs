@@ -121,13 +121,20 @@ public class PlayerController : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(!isKnockback && collision.gameObject.CompareTag("Enemy")){
-            isKnockback = true;
+        if(isKnockback) return;
+        if(collision.gameObject.CompareTag("LightEnemy")){
             ReceiveDamage(20);
+            isKnockback = true;
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
-            StartCoroutine(Knockback(knockbackDirection));
+            StartCoroutine(Knockback(knockbackDirection));  
+        }else if (collision.gameObject.CompareTag("HeavyEnemy"))
+        {
+            ReceiveDamage(35);
+            isKnockback = true;
+            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+            StartCoroutine(Knockback(knockbackDirection));  
         }
-            
+          
     }
     void CastSkill()
     {

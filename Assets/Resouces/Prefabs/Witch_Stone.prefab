@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5978692818580549406}
   - component: {fileID: -6497939387205388766}
   - component: {fileID: 1697975027051358807}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Witch_Stone
   m_TagString: Player
   m_Icon: {fileID: 0}

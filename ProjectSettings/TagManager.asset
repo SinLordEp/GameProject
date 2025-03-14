@@ -24,10 +24,10 @@ TagManager:
   - Ground
   - Entity
   - Skill
-  - 
+  - Player
   - Waypoint
   - NotPassable
-  - 
+  - Enemy
   - 
   - 
   - 

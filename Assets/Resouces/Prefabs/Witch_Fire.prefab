@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5796110902638336516}
   - component: {fileID: -8151923740020030019}
   - component: {fileID: -6147514920179564623}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Witch_Fire
   m_TagString: Player
   m_Icon: {fileID: 0}
