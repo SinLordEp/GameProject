@@ -203,6 +203,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 50512961935941442, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 212259381048184306, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       propertyPath: m_SortingLayer
       value: 5
@@ -3918,6 +3922,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &753451682
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.380649
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6808783
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110089482730534450, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_Name
+      value: Witch_Light
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
 --- !u!1 &765831974
 GameObject:
   m_ObjectHideFlags: 0
@@ -4907,6 +4968,10 @@ PrefabInstance:
     - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61252362154681264, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20246,6 +20311,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1803424409 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+  m_PrefabInstance: {fileID: 753451682}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1858722319
 GameObject:
   m_ObjectHideFlags: 0
@@ -21264,7 +21334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b3adb560d14b147b7945fcccbfde8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1803424409}
   offset: {x: 0, y: 1, z: -5}
   smoothSpeed: 1
 --- !u!1 &2114002091
@@ -21777,3 +21847,4 @@ SceneRoots:
   - {fileID: 231125778}
   - {fileID: 1237624007}
   - {fileID: 1231261198}
+  - {fileID: 753451682}
