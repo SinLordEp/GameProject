@@ -134,20 +134,20 @@ public class EnemyControl : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!isKnockback && collision.gameObject.CompareTag("StoneSkill")){
+        if(!isKnockback && collision.CompareTag("StoneSkill")){
             isKnockback = true;
             ReceiveDamage(30);
             Vector2 knockbackDirection = Vector2.up; 
-            StartCoroutine(Knockback(knockbackDirection, 2f));
-        }else if(!isKnockback && collision.gameObject.CompareTag("FireSkill"))
+            StartCoroutine(Knockback(knockbackDirection, 1f));
+        }else if(!isKnockback && collision.CompareTag("FireSkill"))
         {
             isKnockback = true;
             ReceiveDamage(40);
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
-            StartCoroutine(Knockback(knockbackDirection, 2f));
-        }else if(!isKnockback && collision.gameObject.CompareTag("LightSkill"))
+            StartCoroutine(Knockback(knockbackDirection, 1f));
+        }else if(!isKnockback && collision.CompareTag("LightSkill"))
         {
             isKnockback = true;
             ReceiveDamage(15);
