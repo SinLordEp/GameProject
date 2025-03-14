@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
         playerHP = maxHP;
-        Debug.Log("Character Name: " + selectedCharacter);
+        Debug.Log("Character index: " + selectedCharacter);
     }
 
     public int GetCharacter()
