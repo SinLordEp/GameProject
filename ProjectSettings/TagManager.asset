@@ -12,6 +12,8 @@ TagManager:
   - FireSkill
   - LightSkill
   - Waypoint
+  - HeavyEnemy
+  - LightEnemy
   layers:
   - Default
   - TransparentFX
@@ -24,7 +26,7 @@ TagManager:
   - Skill
   - 
   - Waypoint
-  - 
+  - NotPassable
   - 
   - 
   - 
