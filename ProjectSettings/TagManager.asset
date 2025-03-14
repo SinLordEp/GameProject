@@ -11,6 +11,7 @@ TagManager:
   - StoneSkill
   - FireSkill
   - LightSkill
+  - Waypoint
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Entity
   - Skill
   - 
-  - 
+  - Waypoint
   - 
   - 
   - 
