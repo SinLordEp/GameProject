@@ -6030,6 +6030,67 @@ MonoBehaviour:
   target: {fileID: 0}
   offset: {x: 0, y: 3, z: -5}
   smoothSpeed: 5
+--- !u!1001 &2076684241
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.973747
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.910407
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835135052495554538, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7369283400027152045, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: attackSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110089482730534450, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
+      propertyPath: m_Name
+      value: Witch_Light
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f764d390c56b0b46bb228ab61692a70, type: 3}
 --- !u!1 &2114002091
 GameObject:
   m_ObjectHideFlags: 0
@@ -6413,3 +6474,4 @@ SceneRoots:
   - {fileID: 19067385}
   - {fileID: 48962599}
   - {fileID: 826918381}
+  - {fileID: 2076684241}
