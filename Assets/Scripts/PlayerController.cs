@@ -61,10 +61,11 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 direction = facingRight ? Vector2.right : Vector2.left;
         Vector2 bottom = transform.position;
-        Vector2 middle = bottom + new Vector2(0, 1f);
+        Vector2 middle = bottom + new Vector2(0, 0.5f);
         Vector2 top = bottom + new Vector2(0, 1f);
         RaycastHit2D hitTop = Physics2D.Raycast(top, direction, 0.6f, groundLayer);
         RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, 0.6f, groundLayer);
+        RaycastHit2D hitBottom = Physics2D.Raycast(bottom, direction, 0.6f, groundLayer);
         return hitTop.collider != null || hitMiddle.collider != null;
 
     }
@@ -149,6 +150,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("Hurt");
             }else{
                 gameObject.tag = "Dead";
+                gameObject.layer = 7;
                 isDead = true;
                 animator.SetTrigger("Dead");              
                 Invoke("Die", 3f);

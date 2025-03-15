@@ -4,11 +4,13 @@ public class EnemyControl : MonoBehaviour
 {
     public int health = 100;
     public bool patrol = false;
-    public float chaseTime = 0;
-    public float moveSpeed = -5f;
+    public int chaseTime = 600;
+    public float moveSpeed = 5f;
     public float jumpForce = 6f;
     public float knockbackForce = 10f;
     public float knockbackTime = 1;
+    public float chaseRange = 10f;
+    public float attackRange = 1.5f;
     public Animator animator;
     public LayerMask groundLayer;
     public LayerMask playerLayer;
@@ -19,9 +21,10 @@ public class EnemyControl : MonoBehaviour
     private enum State {Idle,Moving,Charging};
     private State currentState = State.Idle;
     private bool isDead = false;
-    private bool playerSeen = false;
     private bool isAttacking = false; 
     private bool isWaiting = false;
+    private int chaseCountdown;
+    private GameObject player;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,17 +46,60 @@ public class EnemyControl : MonoBehaviour
 
     void Hunt()
     {
+        if(isPlayerInRange(attackRange) && !isAttacking)
+        {
+            Attack();
+        }
+        if(isPlayerInRange(chaseRange))
+        {
+            chaseCountdown = chaseTime;
+            player = GameObject.FindGameObjectWithTag("Player");
+        }else{
+            chaseCountdown -= 1;
+        }
+        if(chaseCountdown <= 0){
+            ChangeState(State.Idle);
+            return;
+        }
+        if(!isAttacking)
+        {
+            ChasePlayer();
+        }
 
+    }
+
+    void ChasePlayer()
+    {
+        float distance = Mathf.Sign(player.transform.position.x - transform.position.x);
+        if ((distance > 0 && !facingRight) || (distance < 0 && facingRight))
+        {
+            Flip();
+        }
+        Vector2 direction = facingRight ? Vector2.right : Vector2.left;
+        if(isBlockByLayer(wallLayer))
+        {
+            ChangeState(State.Idle);
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            return;
+        }
+        if(isBlockByLayer(groundLayer))
+        {
+            Jump();
+        }else{
+            HorizontalMoving(direction);
+        }
+    
     }
 
     void Patrol()
     {
-        if(isPlayerInRange() && !isAttacking)
+        if(isPlayerInRange(attackRange) && !isAttacking)
         {
             Attack();
         }
-        else if(isTouchingWall())
+        else if(isBlockByLayer(wallLayer) || isBlockByLayer(groundLayer))
         {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             Flip();
             ChangeState(State.Idle);
             isWaiting = true;
@@ -61,7 +107,8 @@ public class EnemyControl : MonoBehaviour
         }
         else if(!isAttacking && !isWaiting)
         {
-            HorizontalMoving();
+            Vector2 direction = facingRight ? Vector2.right : Vector2.left;
+            HorizontalMoving(direction);
         }
     }
     void StopWaiting()
@@ -73,35 +120,29 @@ public class EnemyControl : MonoBehaviour
         isAttacking = false;
         ChangeState(State.Idle);
     }
-    bool isTouchingWall()
+    bool isBlockByLayer(LayerMask layer)
     {
         Vector2 direction = facingRight ? Vector2.right : Vector2.left;
         Vector2 bottom = transform.position;
         float height = GetComponent<Collider2D>().bounds.size.y;
         Vector2 middle = bottom + new Vector2(0, height * 0.5f);
-        RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, 1f, wallLayer);
-        //Debug.DrawRay(middle, direction * 0.5f, Color.red);
+        RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, 1f, layer);
         return hitMiddle.collider != null;
     }
 
-    bool isPlayerInRange()
+    bool isPlayerInRange(float detectRange)
     {
         Vector2 direction = facingRight ? Vector2.right : Vector2.left;
         Vector2 bottom = transform.position;
         float height = GetComponent<Collider2D>().bounds.size.y;
         Vector2 middle = bottom + new Vector2(0, height * 0.5f);
-        RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, 2f, playerLayer);
+        RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, detectRange, playerLayer);
         if (hitMiddle.collider != null && hitMiddle.collider.CompareTag("Player"))
         {
             return true;
         }else{
             return false;
         }
-    }
-
-    bool isPlayerSeen()
-    {
-
     }
 
     void Attack()
@@ -118,22 +159,21 @@ public class EnemyControl : MonoBehaviour
             animator.SetInteger("State", (int)currentState);
         }
     }
-    void HorizontalMoving()
+    void HorizontalMoving(Vector2 direction)
     {
-        rb.linearVelocity = new Vector2( moveSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2( direction.x * moveSpeed, rb.linearVelocity.y);
         ChangeState(State.Moving);
-        if(rb.linearVelocity.magnitude == 0) Jump();
     }
     void Jump()
     {
         if(isGrounded())
         {
+            animator.SetTrigger("Jump");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
     }
     void Flip()
     {
-        moveSpeed = moveSpeed * -1f;
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
@@ -157,7 +197,7 @@ public class EnemyControl : MonoBehaviour
             isKnockback = true;
             ReceiveDamage(15);
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
-            StartCoroutine(Knockback(knockbackDirection, 0.5f));
+            StartCoroutine(Knockback(knockbackDirection, 0.2f));
         }
     }
     void ReceiveDamage(int damage)
@@ -175,7 +215,7 @@ public class EnemyControl : MonoBehaviour
     private IEnumerator Knockback(Vector2 direction, float knockbackRate)
     {
         rb.linearVelocity = direction * knockbackForce * knockbackRate;
-        yield return new WaitForSeconds(knockbackTime);
+        yield return new WaitForSeconds(knockbackTime*knockbackRate);
         isKnockback = false;
     }
     bool isGrounded()
@@ -187,6 +227,7 @@ public class EnemyControl : MonoBehaviour
     void Die()
     {
         gameObject.tag = "Dead";
+        gameObject.layer = 7;
         isDead = true;
         animator.SetTrigger("Dead");
         Destroy(gameObject, 3f);

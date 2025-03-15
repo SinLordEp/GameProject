@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4532010589869964}
   - component: {fileID: 114204724084870448}
   - component: {fileID: 61751993304262736}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GroundSensor
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,9 +104,10 @@ GameObject:
   - component: {fileID: 212652212501150786}
   - component: {fileID: 50959880312528810}
   - component: {fileID: 61346583712760016}
-  m_Layer: 0
+  - component: {fileID: 1068644096389553770}
+  m_Layer: 12
   m_Name: HeavyBandit
-  m_TagString: Player
+  m_TagString: HeavyEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,8 +122,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4532010589869964}
   m_Father: {fileID: 0}
@@ -190,8 +191,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 217268821
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 317b8365a4649ab459f6cb58ec8f9f18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -277,3 +278,34 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &1068644096389553770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463392086428580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435f93045ab9dca4d8341daa6309e42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  patrol: 0
+  chaseTime: 600
+  moveSpeed: 5
+  jumpForce: 5
+  knockbackForce: 10
+  knockbackTime: 1
+  chaseRange: 10
+  attackRange: 1.5
+  animator: {fileID: 95734438044755836}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 2048

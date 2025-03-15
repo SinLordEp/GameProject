@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 50512961935941442}
   - component: {fileID: 253153914409001437}
   - component: {fileID: 1506909328666564983}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: LightBandit
   m_TagString: LightEnemy
   m_Icon: {fileID: 0}
@@ -155,10 +155,12 @@ MonoBehaviour:
   health: 100
   patrol: 1
   chaseTime: 0
-  moveSpeed: -3
+  moveSpeed: 3
   jumpForce: 6
   knockbackForce: 10
   knockbackTime: 1
+  chaseRange: 10
+  attackRange: 1.5
   animator: {fileID: 95346456782871180}
   groundLayer:
     serializedVersion: 2
