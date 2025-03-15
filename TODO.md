@@ -16,6 +16,12 @@
 
 - Win screen after completing scene 3 may be added, or loopback to intro (D)
 
+- Spikes in Scene2 must cause damage upon contact
+
 
 ## Aesthetic considerations.
 - Intro and Outro screens may be improved
+
+
+## Tech stuff
+- Finish enemycontroller and make heavybandit implement it
