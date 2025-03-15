@@ -22,8 +22,8 @@
 ## Aesthetic considerations.
 - Intro and Outro screens may be improved
 
+- Camerafollow speed may be faster, especially during falling
 
 
 ## Tech stuff
 - Finish enemycontroller and make heavybandit implement it
-- Main camara following speed should be increase
