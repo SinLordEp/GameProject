@@ -27,3 +27,4 @@
 
 ## Tech stuff
 - Finish enemycontroller and make heavybandit implement it (D)
+- Add hit sounds
