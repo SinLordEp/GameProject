@@ -14,6 +14,7 @@ TagManager:
   - Waypoint
   - HeavyEnemy
   - LightEnemy
+  - Dead
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - Entity
+  - NoHitBoxEntity
   - Skill
   - Player
   - Waypoint

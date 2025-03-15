@@ -23,5 +23,7 @@
 - Intro and Outro screens may be improved
 
 
+
 ## Tech stuff
 - Finish enemycontroller and make heavybandit implement it
+- Main camara following speed should be increase

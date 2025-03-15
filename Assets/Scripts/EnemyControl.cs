@@ -99,6 +99,11 @@ public class EnemyControl : MonoBehaviour
         }
     }
 
+    bool isPlayerSeen()
+    {
+
+    }
+
     void Attack()
     {
         isAttacking = true;
@@ -181,6 +186,7 @@ public class EnemyControl : MonoBehaviour
     }
     void Die()
     {
+        gameObject.tag = "Dead";
         isDead = true;
         animator.SetTrigger("Dead");
         Destroy(gameObject, 3f);

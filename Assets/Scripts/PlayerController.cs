@@ -148,8 +148,9 @@ public class PlayerController : MonoBehaviour
         if(GameManager.Instance.ReceiveDamage(damage)){
                 animator.SetTrigger("Hurt");
             }else{
+                gameObject.tag = "Dead";
                 isDead = true;
-                animator.SetTrigger("Dead");
+                animator.SetTrigger("Dead");              
                 Invoke("Die", 3f);
             }
     }
