@@ -8,7 +8,7 @@
 
 - Stonewitch knockback is bugged, she clips into the floor when knocked
 
-- Lightwitch skill delay is too long
+- Lightwitch skill delay is too long (D) it was intentional
 
 ## Level Design
 
@@ -26,4 +26,4 @@
 
 
 ## Tech stuff
-- Finish enemycontroller and make heavybandit implement it
+- Finish enemycontroller and make heavybandit implement it (D)
