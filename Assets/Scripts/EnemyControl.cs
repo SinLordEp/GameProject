@@ -102,13 +102,18 @@ public class EnemyControl : MonoBehaviour
         {
             Attack();
         }
-        else if(isBlockByLayer(wallLayer) || isBlockByLayer(groundLayer))
+        //else if(isBlockByLayer(wallLayer) || isBlockByLayer(groundLayer))
+        else if(isBlockByLayer(wallLayer))
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             Flip();
             ChangeState(State.Idle);
             isWaiting = true;
             Invoke("StopWaiting",2f);
+        }
+        else if(isBlockByLayer(groundLayer))
+        {
+            Jump();
         }
         else if(!isAttacking && !isWaiting)
         {
