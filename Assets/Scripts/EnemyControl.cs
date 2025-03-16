@@ -11,6 +11,7 @@ public class EnemyControl : MonoBehaviour
     public float knockbackTime = 1;
     public float chaseRange = 10f;
     public float attackRange = 1.5f;
+    public GameObject attackHitbox;
     public Animator animator;
     public LayerMask groundLayer;
     public LayerMask playerLayer;
@@ -119,12 +120,6 @@ public class EnemyControl : MonoBehaviour
     {
         isWaiting = false;
     }
-    void StopAttacking()
-    {
-        isAttacking = false;
-        ChangeState(State.Idle);
-    }
-    
     bool isBlockByLayer(LayerMask layer)
     {
         Vector2 direction = facingRight ? Vector2.right : Vector2.left;
@@ -157,11 +152,10 @@ public class EnemyControl : MonoBehaviour
         Vector2 top = bottom + new Vector2(0, height);
         RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, detectRange, playerLayer);
         RaycastHit2D hitTop = Physics2D.Raycast(top, direction, detectRange, playerLayer);
-        if(hitMiddle.collider == null && hitTop.collider == null) return false;
-        if (hitMiddle.collider.CompareTag("Player") || hitTop.collider.CompareTag("Player"))
+        if((hitMiddle.collider != null && hitMiddle.collider.CompareTag("Player")) || (hitTop.collider != null && hitTop.collider.CompareTag("Player")))
         {
             return true;
-        }else{
+        } else{
             return false;
         }
     }
@@ -170,7 +164,28 @@ public class EnemyControl : MonoBehaviour
     {
         isAttacking = true;
         animator.SetTrigger("Attack");
-        Invoke("StopAttacking",1f);
+        Invoke("CreateAttackHitbox",0.5f);
+        Invoke("StopAttacking", 1f);
+    }
+
+    void StopAttacking()
+    {
+        isAttacking = false;
+        ChangeState(State.Idle);
+    }
+
+    void CreateAttackHitbox()
+    {
+        Vector2 direction = facingRight ? Vector2.right : Vector2.left;
+        rb.linearVelocity = new Vector2( direction.x * moveSpeed*2f, rb.linearVelocity.y);
+        GameObject hitbox = Instantiate(attackHitbox, transform.position, Quaternion.identity, transform);
+        hitbox.transform.localPosition = new Vector3(-0.4f, 1, 0);
+        StartCoroutine(DestroyHitbox(hitbox));
+    }
+    IEnumerator DestroyHitbox( GameObject hitbox)
+    {
+        yield return new WaitForSeconds(0.2f);
+        Destroy(hitbox);
     }
     private void ChangeState(State newState)
     {

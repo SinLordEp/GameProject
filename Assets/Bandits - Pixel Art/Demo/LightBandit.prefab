@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8819074798481356562}
   m_Layer: 12
   m_Name: LightBandit
-  m_TagString: LightEnemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,6 +162,7 @@ MonoBehaviour:
   knockbackTime: 1
   chaseRange: 10
   attackRange: 1.5
+  attackHitbox: {fileID: 2417622352053242470, guid: 25380d3a67e056a44ae8c0c57653c41f, type: 3}
   animator: {fileID: 95346456782871180}
   groundLayer:
     serializedVersion: 2

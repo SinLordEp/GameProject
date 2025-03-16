@@ -16,6 +16,8 @@ TagManager:
   - LightEnemy
   - Dead
   - Spikes
+  - LightAttack
+  - HeavyAttack
   layers:
   - Default
   - TransparentFX

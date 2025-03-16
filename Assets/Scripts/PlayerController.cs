@@ -130,24 +130,6 @@ public class PlayerController : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(isKnockback) return;
-        if(collision.gameObject.CompareTag("LightEnemy")){
-            ReceiveDamage(20);
-            isKnockback = true;
-            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
-            InteruptByHurt();
-            StartCoroutine(Knockback(knockbackDirection));  
-        }else if (collision.gameObject.CompareTag("HeavyEnemy"))
-        {
-            ReceiveDamage(35);
-            isKnockback = true;
-            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
-            InteruptByHurt();
-            StartCoroutine(Knockback(knockbackDirection));  
-        }
-    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -156,6 +138,23 @@ public class PlayerController : MonoBehaviour
             isKnockback = true;
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
             StartCoroutine(Knockback(knockbackDirection));
+        }
+
+        if(!isKnockback && collision.CompareTag("LightAttack")){
+            ReceiveDamage(20);
+            isKnockback = true;
+            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+            InteruptByHurt();
+            StartCoroutine(Knockback(knockbackDirection));  
+        }
+        
+        if (!isKnockback && collision.CompareTag("HeavyAttack"))
+        {
+            ReceiveDamage(35);
+            isKnockback = true;
+            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+            InteruptByHurt();
+            StartCoroutine(Knockback(knockbackDirection));  
         }
     }
 

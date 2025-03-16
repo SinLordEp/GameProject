@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -2686745028488620035}
   m_Layer: 12
   m_Name: HeavyBandit
-  m_TagString: HeavyEnemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,6 +162,7 @@ MonoBehaviour:
   knockbackTime: 1
   chaseRange: 10
   attackRange: 1.5
+  attackHitbox: {fileID: 1336662081831462226, guid: 4a93dd4023dc0b448899d17cd866d29b, type: 3}
   animator: {fileID: 95734438044755836}
   groundLayer:
     serializedVersion: 2
