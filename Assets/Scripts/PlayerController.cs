@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         {
             HorizontalMoving();
         }
-         if (transform.position.y < -30f)
+        if (transform.position.y < -30f)
         {
             Die();
         } 
@@ -134,6 +134,11 @@ public class PlayerController : MonoBehaviour
             isKnockback = true;
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
             StartCoroutine(Knockback(knockbackDirection));  
+        }else if(collision.gameObject.CompareTag("Spikes")){
+            ReceiveDamage(30);
+            isKnockback = true;
+            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+            StartCoroutine(Knockback(knockbackDirection));
         }
           
     }
