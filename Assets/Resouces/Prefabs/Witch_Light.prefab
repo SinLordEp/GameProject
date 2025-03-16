@@ -154,10 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ac9b168e868ab43a03ba7982c975e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 9
+  moveSpeed: 8
   jumpForce: 12
   knockbackForce: 10
-  knockbackTime: 1
+  knockbackTime: 0.5
   skillSpawnHeight: -0.1
   skillDelay: 1
   animator: {fileID: 1695472337825068246}
