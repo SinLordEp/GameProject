@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private enum State {Idle,Moving,Charging};
     private State currentState = State.Idle;
     private bool isCharging = false;
+    private bool isAttacking = false;
     private bool isDead = false;
     public GameObject Skill;
 
@@ -41,20 +42,28 @@ public class PlayerController : MonoBehaviour
 
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!isCharging && !isAttacking && Input.GetKeyDown(KeyCode.Space))
         {
-            isCharging = true;
             ChangeState(State.Charging);
-        }else if (Input.GetKeyUp(KeyCode.Space))
+            isCharging = true;
+        }else if (isCharging && Input.GetKeyUp(KeyCode.Space))
         {
+            isAttacking = true;
+            isCharging = false;
             animator.SetTrigger("Attack");
             Invoke("CastSkill", skillDelay);
-            isCharging = false;
+            Invoke("ResetAttackState", skillDelay+0.2f);
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Jump();
         }
+    }
+
+    void ResetAttackState()
+    {
+        isAttacking = false;
+        ChangeState(State.Idle);
     }
 
     bool isTouchingWall()
@@ -79,6 +88,7 @@ public class PlayerController : MonoBehaviour
     }
     void HorizontalMoving()
     {
+        if(isCharging || isAttacking) return;
         float move = Input.GetAxis("Horizontal");
         if (isTouchingWall() && move != 0)
         {
