@@ -173,7 +173,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   audioSource: {fileID: 8819074798481356562}
-  hitByStone: {fileID: 8300000, guid: fb04e39f37f65c248836c0c7fa78ac72, type: 3}
+  hitByStone: {fileID: 8300000, guid: 2384b8af5e527fa478d85e3e3b74459d, type: 3}
   hitByFire: {fileID: 8300000, guid: 5dbf5923fd5fac64a98d51acf70d1401, type: 3}
   hitByLight: {fileID: 8300000, guid: d7a8acd6cf4f5244298579fec93c186d, type: 3}
 --- !u!70 &1506909328666564983

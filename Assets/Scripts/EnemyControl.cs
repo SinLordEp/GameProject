@@ -205,23 +205,23 @@ public class EnemyControl : MonoBehaviour
         if(!isKnockback && collision.CompareTag("StoneSkill")){
             audioSource.PlayOneShot(hitByStone);
             isKnockback = true;
-            ReceiveDamage(30);
+            ReceiveDamage(40);
             Vector2 knockbackDirection = Vector2.up; 
             StartCoroutine(Knockback(knockbackDirection, 1f));
         }else if(!isKnockback && collision.CompareTag("FireSkill"))
         {
             audioSource.PlayOneShot(hitByFire);
             isKnockback = true;
-            ReceiveDamage(40);
+            ReceiveDamage(50);
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
             StartCoroutine(Knockback(knockbackDirection, 1f));
         }else if(!isKnockback && collision.CompareTag("LightSkill"))
         {
             audioSource.PlayOneShot(hitByLight);
             isKnockback = true;
-            ReceiveDamage(15);
+            ReceiveDamage(10);
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
-            StartCoroutine(Knockback(knockbackDirection, 0.2f));
+            StartCoroutine(Knockback(knockbackDirection, 0.1f));
         }
     }
     void ReceiveDamage(int damage)
