@@ -6,7 +6,7 @@
 
 - Firewitch skill fireball looks cropped near the end of the animation (D)
 
-- Stonewitch knockback is bugged, she clips into the floor when knocked
+- Stonewitch knockback is bugged, she clips into the floor when knocked (D)
 
 ## Level Design
 - Win screen after completing scene 3 may be added, or loopback to intro (D)
