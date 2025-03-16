@@ -82,7 +82,7 @@ public class EnemyControl : MonoBehaviour
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             return;
         }
-        if(isBlockByLayer(groundLayer))
+        if(isTouchingWall())
         {
             Jump();
         }else{
@@ -120,6 +120,7 @@ public class EnemyControl : MonoBehaviour
         isAttacking = false;
         ChangeState(State.Idle);
     }
+    
     bool isBlockByLayer(LayerMask layer)
     {
         Vector2 direction = facingRight ? Vector2.right : Vector2.left;
@@ -128,6 +129,19 @@ public class EnemyControl : MonoBehaviour
         Vector2 middle = bottom + new Vector2(0, height * 0.5f);
         RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, 1f, layer);
         return hitMiddle.collider != null;
+    }
+
+    bool isTouchingWall()
+    {
+        Vector2 direction = facingRight ? Vector2.right : Vector2.left;
+        Vector2 bottom = transform.position;
+        Vector2 middle = bottom + new Vector2(0, 0.5f);
+        Vector2 top = bottom + new Vector2(0, 1f);
+        RaycastHit2D hitTop = Physics2D.Raycast(top, direction, 0.6f, groundLayer);
+        RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, 0.6f, groundLayer);
+        RaycastHit2D hitBottom = Physics2D.Raycast(bottom, direction, 0.6f, groundLayer);
+        return hitTop.collider != null || hitMiddle.collider != null;
+
     }
 
     bool isPlayerInRange(float detectRange)
