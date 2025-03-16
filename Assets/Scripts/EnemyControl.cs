@@ -15,6 +15,10 @@ public class EnemyControl : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask playerLayer;
     public LayerMask wallLayer;
+    public AudioSource audioSource;
+    public AudioClip hitByStone;
+    public AudioClip hitByFire;
+    public AudioClip hitByLight;
     private bool isKnockback = false;
     private Rigidbody2D rb;
     private bool facingRight = false;
@@ -199,18 +203,21 @@ public class EnemyControl : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(!isKnockback && collision.CompareTag("StoneSkill")){
+            audioSource.PlayOneShot(hitByStone);
             isKnockback = true;
             ReceiveDamage(30);
             Vector2 knockbackDirection = Vector2.up; 
             StartCoroutine(Knockback(knockbackDirection, 1f));
         }else if(!isKnockback && collision.CompareTag("FireSkill"))
         {
+            audioSource.PlayOneShot(hitByFire);
             isKnockback = true;
             ReceiveDamage(40);
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
             StartCoroutine(Knockback(knockbackDirection, 1f));
         }else if(!isKnockback && collision.CompareTag("LightSkill"))
         {
+            audioSource.PlayOneShot(hitByLight);
             isKnockback = true;
             ReceiveDamage(15);
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
