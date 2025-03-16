@@ -16,5 +16,5 @@
 
 
 ## Tech stuff
-- Add hit sounds
-- Add backgorund music (DO NOT ADD .wav FILES TO REPOSITORY BEFORE CONFIGURING LFS)
+- Add hit sounds (D)
+- Add backgorund music (DO NOT ADD .wav FILES TO REPOSITORY BEFORE CONFIGURING LFS)  (D) added .ogg bgm
