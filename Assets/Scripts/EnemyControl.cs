@@ -157,7 +157,7 @@ public class EnemyControl : MonoBehaviour
         Vector2 top = bottom + new Vector2(0, height);
         RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, detectRange, playerLayer);
         RaycastHit2D hitTop = Physics2D.Raycast(top, direction, detectRange, playerLayer);
-        if(hitMiddle.collider == null || hitTop.collider == null) return false;
+        if(hitMiddle.collider == null && hitTop.collider == null) return false;
         if (hitMiddle.collider.CompareTag("Player") || hitTop.collider.CompareTag("Player"))
         {
             return true;
