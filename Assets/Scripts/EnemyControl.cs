@@ -240,6 +240,12 @@ public class EnemyControl : MonoBehaviour
     }
     void Die()
     {
+        if(gameObject.tag == "HeavyEnemy")
+        {
+            GameManager.Instance.RegainHP(40);
+        }else{
+            GameManager.Instance.RegainHP(20);
+        }
         gameObject.tag = "Dead";
         gameObject.layer = 7;
         isDead = true;

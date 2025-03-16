@@ -65,6 +65,17 @@ public class GameManager : MonoBehaviour
         return playerHP > 0;
     }
 
+    public void RegainHP(int HP)
+    {
+        if(maxHP - playerHP < HP)
+        {
+            playerHP = maxHP;
+        }else
+        {
+            playerHP += HP;
+        }
+    }
+
     public int GetHP()
     {
         return playerHP;
