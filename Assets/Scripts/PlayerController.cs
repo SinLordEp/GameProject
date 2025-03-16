@@ -29,9 +29,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {   
-        HandleInput();
         if(!isKnockback && !isDead)
         {
+            HandleInput();
             HorizontalMoving();
         }
         if (transform.position.y < -30f)
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
         }
-        if (Mathf.Abs(move) > 0 && !isCharging)
+        if (Mathf.Abs(move) > 0)
         {
             ChangeState(State.Moving);
         }
@@ -106,11 +106,11 @@ public class PlayerController : MonoBehaviour
         {
             ChangeState(State.Idle);
         }
-        if (move > 0 && !facingRight && !isCharging)
+        if (move > 0 && !facingRight)
         {
             Flip();
         }
-        else if (move < 0 && facingRight && !isCharging)
+        else if (move < 0 && facingRight)
         {
             Flip();
         }
@@ -137,20 +137,33 @@ public class PlayerController : MonoBehaviour
             ReceiveDamage(20);
             isKnockback = true;
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+            InteruptByHurt();
             StartCoroutine(Knockback(knockbackDirection));  
         }else if (collision.gameObject.CompareTag("HeavyEnemy"))
         {
             ReceiveDamage(35);
             isKnockback = true;
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+            InteruptByHurt();
             StartCoroutine(Knockback(knockbackDirection));  
-        }else if(collision.gameObject.CompareTag("Spikes")){
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(!isKnockback && collision.CompareTag("Spikes")){
             ReceiveDamage(30);
             isKnockback = true;
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
             StartCoroutine(Knockback(knockbackDirection));
         }
-          
+    }
+
+    void InteruptByHurt()
+    {
+        isCharging = false;
+        isAttacking =false;
+        ChangeState(State.Idle);
     }
     void CastSkill()
     {
