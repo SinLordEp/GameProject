@@ -8,23 +8,13 @@
 
 - Stonewitch knockback is bugged, she clips into the floor when knocked
 
-- Lightwitch skill delay is too long (D) it was intentional
-
 ## Level Design
-
-- Level 2 and 3 are missing enemies and nav limits. (D)
-
 - Win screen after completing scene 3 may be added, or loopback to intro (D)
 
-- Spikes in Scene2 must cause damage upon contact
-
-
 ## Aesthetic considerations.
-- Intro and Outro screens may be improved
-
-- Camerafollow speed may be faster, especially during falling
+- GAME OVER screen may be improved
 
 
 ## Tech stuff
-- Finish enemycontroller and make heavybandit implement it (D)
 - Add hit sounds
+- Add backgorund music (DO NOT ADD .wav FILES TO REPOSITORY BEFORE CONFIGURING LFS)
