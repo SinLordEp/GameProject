@@ -150,8 +150,11 @@ public class EnemyControl : MonoBehaviour
         Vector2 bottom = transform.position;
         float height = GetComponent<Collider2D>().bounds.size.y;
         Vector2 middle = bottom + new Vector2(0, height * 0.5f);
+        Vector2 top = bottom + new Vector2(0, height);
         RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, detectRange, playerLayer);
-        if (hitMiddle.collider != null && hitMiddle.collider.CompareTag("Player"))
+        RaycastHit2D hitTop = Physics2D.Raycast(top, direction, detectRange, playerLayer);
+        if(hitMiddle.collider == null || hitTop.collider == null) return false;
+        if (hitMiddle.collider.CompareTag("Player") || hitTop.collider.CompareTag("Player"))
         {
             return true;
         }else{
