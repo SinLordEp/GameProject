@@ -1,10 +1,10 @@
 
 ## Witches Bugs
-- Firewitch knockback looks chopped. change knockback time or knockback force.
+- Firewitch knockback looks chopped. change knockback time or knockback force. (D)
 
-- Firewitch charging animation is chopped, cuts to idle abruptly
+- Firewitch charging animation is chopped, cuts to idle abruptly (D)
 
-- Firewitch skill fireball looks cropped near the end of the animation
+- Firewitch skill fireball looks cropped near the end of the animation (D)
 
 - Stonewitch knockback is bugged, she clips into the floor when knocked
 
