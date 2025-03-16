@@ -4,7 +4,7 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform target; // Asignaremos al protagonista en la caja de Component
     public Vector3 offset = new Vector3(0, 0, -5);
-    public float smoothSpeed = 5f;
+    public float smoothSpeed = 10f;
 
     void Start()
     {

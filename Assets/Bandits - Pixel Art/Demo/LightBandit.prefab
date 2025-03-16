@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8819074798481356562}
   m_Layer: 12
   m_Name: LightBandit
-  m_TagString: Enemy
+  m_TagString: LightEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

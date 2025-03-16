@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -2686745028488620035}
   m_Layer: 12
   m_Name: HeavyBandit
-  m_TagString: Enemy
+  m_TagString: HeavyEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

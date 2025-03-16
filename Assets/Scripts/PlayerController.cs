@@ -134,28 +134,34 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(!isKnockback && collision.CompareTag("Spikes")){
-            ReceiveDamage(30);
             isKnockback = true;
+            ReceiveDamage(30);          
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
-            StartCoroutine(Knockback(knockbackDirection));
+            StartCoroutine(Knockback(new Vector2(0,1f)));
         }
 
         if(!isKnockback && collision.CompareTag("LightAttack")){
-            ReceiveDamage(20);
             isKnockback = true;
-            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+            ReceiveDamage(20);           
+            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized.x > 0 ? new Vector2(1f,0) : new Vector2(-1f,0);
             InteruptByHurt();
             StartCoroutine(Knockback(knockbackDirection));  
         }
-        
+
         if (!isKnockback && collision.CompareTag("HeavyAttack"))
         {
-            ReceiveDamage(35);
             isKnockback = true;
-            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+            ReceiveDamage(35);
+            Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized.x > 0 ? new Vector2(1f,0) : new Vector2(-1f,0);
             InteruptByHurt();
             StartCoroutine(Knockback(knockbackDirection));  
         }
+    }
+    private IEnumerator Knockback(Vector2 direction)
+    {
+        rb.linearVelocity = direction * knockbackForce;
+        yield return new WaitForSeconds(knockbackTime);
+        isKnockback = false;
     }
 
     void InteruptByHurt()
@@ -182,13 +188,6 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("Dead");              
                 Invoke("Die", 3f);
             }
-    }
-
-    private IEnumerator Knockback(Vector2 direction)
-    {
-        rb.linearVelocity = direction * knockbackForce;
-        yield return new WaitForSeconds(knockbackTime);
-        isKnockback = false;
     }
 
     bool isGrounded()
