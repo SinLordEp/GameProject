@@ -222,20 +222,20 @@ public class EnemyControl : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!isKnockback && collision.CompareTag("StoneSkill")){
+        if(!isKnockback && !isDead && collision.CompareTag("StoneSkill")){
             audioSource.PlayOneShot(hitByStone);
             isKnockback = true;
             ReceiveDamage(40);
             Vector2 knockbackDirection = Vector2.up; 
             StartCoroutine(Knockback(knockbackDirection, 1f));
-        }else if(!isKnockback && collision.CompareTag("FireSkill"))
+        }else if(!isKnockback && !isDead && collision.CompareTag("FireSkill"))
         {
             audioSource.PlayOneShot(hitByFire);
             isKnockback = true;
             ReceiveDamage(50);
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
             StartCoroutine(Knockback(knockbackDirection, 1f));
-        }else if(!isKnockback && collision.CompareTag("LightSkill"))
+        }else if(!isKnockback && !isDead && collision.CompareTag("LightSkill"))
         {
             audioSource.PlayOneShot(hitByLight);
             isKnockback = true;
@@ -270,16 +270,16 @@ public class EnemyControl : MonoBehaviour
     }
     void Die()
     {
-        if(gameObject.tag == "HeavyEnemy" && !isDead)
+        isDead = true;
+        if(gameObject.tag == "HeavyEnemy")
         {
             GameManager.Instance.RegainHP(40);
         }
-        if(gameObject.tag == "LightEnemy" && !isDead){
+        if(gameObject.tag == "LightEnemy"){
             GameManager.Instance.RegainHP(20);
         }
         gameObject.tag = "Dead";
-        gameObject.layer = 7;
-        isDead = true;
+        gameObject.layer = 7;  
         animator.SetTrigger("Dead");
         Destroy(gameObject, 3f);
     }
