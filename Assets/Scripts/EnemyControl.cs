@@ -181,6 +181,7 @@ public class EnemyControl : MonoBehaviour
 
     void CreateAttackHitbox()
     {
+        if(isKnockback) return;
         Vector2 direction = facingRight ? Vector2.right : Vector2.left;
         rb.linearVelocity = new Vector2( direction.x * moveSpeed*2f, rb.linearVelocity.y);
         GameObject hitbox = Instantiate(attackHitbox, transform.position, Quaternion.identity, transform);
