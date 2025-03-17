@@ -87,7 +87,7 @@ public class EnemyControl : MonoBehaviour
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             return;
         }
-        if(isLayerDetected(wallLayer, 0.6f))
+        if(isLayerDetected(groundLayer, 0.6f))
         {
             Jump();
         }else{
