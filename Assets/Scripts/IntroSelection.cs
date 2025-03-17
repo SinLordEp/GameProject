@@ -7,6 +7,7 @@ public class IntroSelection : MonoBehaviour
     public Button[] buttons;
     private Button selectedButton = null;
     public Button startGame;
+    public Button endGame;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class IntroSelection : MonoBehaviour
             button.onClick.AddListener(() => SelectButton(button));
         }
         startGame.onClick.AddListener(() => StartGame());
+        endGame.onClick.AddListener(() => Application.Quit());
     }
 
     void SelectButton(Button clickedButton)
