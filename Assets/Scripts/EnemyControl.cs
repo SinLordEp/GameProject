@@ -51,11 +51,11 @@ public class EnemyControl : MonoBehaviour
 
     void Hunt()
     {
-        if(isPlayerInRange(attackRange) && !isAttacking)
+        if(!isAttacking && isLayerDetected(playerLayer, attackRange))
         {
             Attack();
         }
-        if(isPlayerInRange(chaseRange))
+        if(isLayerDetected(playerLayer, chaseRange))
         {
             chaseCountdown = chaseTime;
             player = GameObject.FindGameObjectWithTag("Player");
@@ -81,13 +81,13 @@ public class EnemyControl : MonoBehaviour
             Flip();
         }
         Vector2 direction = facingRight ? Vector2.right : Vector2.left;
-        if(isBlockByLayer(wallLayer))
+        if(isLayerDetected(wallLayer, 1f))
         {
             ChangeState(State.Idle);
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             return;
         }
-        if(isTouchingWall())
+        if(isLayerDetected(wallLayer, 0.6f))
         {
             Jump();
         }else{
@@ -98,12 +98,11 @@ public class EnemyControl : MonoBehaviour
 
     void Patrol()
     {
-        if(isPlayerInRange(attackRange) && !isAttacking)
+        if(!isAttacking && isLayerDetected(playerLayer, attackRange))
         {
             Attack();
         }
-        //else if(isBlockByLayer(wallLayer) || isBlockByLayer(groundLayer))
-        else if(isBlockByLayer(wallLayer))
+        else if(isLayerDetected(wallLayer, 0.6f))
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             Flip();
@@ -111,7 +110,7 @@ public class EnemyControl : MonoBehaviour
             isWaiting = true;
             Invoke("StopWaiting",2f);
         }
-        else if(isBlockByLayer(groundLayer))
+        else if(isLayerDetected(groundLayer, 0.6f))
         {
             Jump();
         }
@@ -125,44 +124,18 @@ public class EnemyControl : MonoBehaviour
     {
         isWaiting = false;
     }
-    bool isBlockByLayer(LayerMask layer)
-    {
-        Vector2 direction = facingRight ? Vector2.right : Vector2.left;
-        Vector2 bottom = transform.position;
-        float height = GetComponent<Collider2D>().bounds.size.y;
-        Vector2 middle = bottom + new Vector2(0, height * 0.5f);
-        RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, 1f, layer);
-        return hitMiddle.collider != null;
-    }
-
-    bool isTouchingWall()
-    {
-        Vector2 direction = facingRight ? Vector2.right : Vector2.left;
-        Vector2 bottom = transform.position;
-        Vector2 middle = bottom + new Vector2(0, 0.5f);
-        Vector2 top = bottom + new Vector2(0, 1f);
-        RaycastHit2D hitTop = Physics2D.Raycast(top, direction, 0.6f, groundLayer);
-        RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, 0.6f, groundLayer);
-        RaycastHit2D hitBottom = Physics2D.Raycast(bottom, direction, 0.6f, groundLayer);
-        return hitTop.collider != null || hitMiddle.collider != null;
-
-    }
-
-    bool isPlayerInRange(float detectRange)
+    bool isLayerDetected(LayerMask layer, float detectRange)
     {
         Vector2 direction = facingRight ? Vector2.right : Vector2.left;
         Vector2 bottom = transform.position;
         float height = GetComponent<Collider2D>().bounds.size.y;
         Vector2 middle = bottom + new Vector2(0, height * 0.5f);
         Vector2 top = bottom + new Vector2(0, height);
-        RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, detectRange, playerLayer);
-        RaycastHit2D hitTop = Physics2D.Raycast(top, direction, detectRange, playerLayer);
-        if((hitMiddle.collider != null && hitMiddle.collider.CompareTag("Player")) || (hitTop.collider != null && hitTop.collider.CompareTag("Player")))
-        {
-            return true;
-        } else{
-            return false;
-        }
+        bottom += new Vector2(0, 0.2f);
+        RaycastHit2D hitTop = Physics2D.Raycast(top, direction, detectRange, layer);
+        RaycastHit2D hitMiddle = Physics2D.Raycast(middle, direction, detectRange, layer);
+        RaycastHit2D hitBottom = Physics2D.Raycast(bottom, direction, detectRange, layer);
+        return hitTop.collider != null || hitMiddle.collider != null || hitBottom.collider != null;
     }
 
     void Attack()
